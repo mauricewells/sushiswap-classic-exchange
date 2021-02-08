@@ -176,14 +176,14 @@ export function useDerivedSwapInfo(): {
 
   const formattedTo = isAddress(to)
   if (!to || !formattedTo) {
-    inputError = inputError ?? t('enterARecipient'); 
+    inputError = inputError ?? t('enterARecipient');
   } else {
     if (
       BAD_RECIPIENT_ADDRESSES.indexOf(formattedTo) !== -1 ||
       (bestTradeExactIn && involvesAddress(bestTradeExactIn, formattedTo)) ||
       (bestTradeExactOut && involvesAddress(bestTradeExactOut, formattedTo))
     ) {
-      inputError = inputError ?? t('invalidRecipt'); 
+      inputError = inputError ?? t('invalidRecipt');
     }
   }
 
